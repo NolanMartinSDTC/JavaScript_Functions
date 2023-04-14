@@ -87,14 +87,14 @@ function getQuadrant(x,y)
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
 
-triangleType(1,2,2);
+triangleType(2,2,1);
 triangleType(1,1,2);
 triangleType(1,1,1,);
 triangleType(9,13,14);
 
 function triangleType(side1,side2,side3)
 {
-    if (side1 + side2 <= side3)
+    if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1)
     {
         console.log(`Sides ${side1}, ${side2}, ${side3} make an invalid triangle`);
     }
