@@ -106,14 +106,14 @@ dataPlanStatus(100,15,56);
 function dataPlanStatus(planLimit, day, usage)
 {
     let maxUse = (planLimit/30).toFixed(3);
-    let actualUse = (planLimit/day).toFixed(3);
+    let actualUse = (usage/day).toFixed(2);
     console.log(`${day} days used, ${30 - day} days remaining`);
     console.log(`Average daily use: ${maxUse} GB/day`)
     let newMaxUse = ((planLimit - usage)/(30-day)).toFixed(2);
 
     if (actualUse > maxUse)
     {
-        console.log(`You are EXCEEDING your average daily use (${(actualUse)} GB/day), continuing this high usage, you'll exceed your data plan by ${((actualUse-maxUse)*(30- day)).toFixed(1)} GB.`)
+        console.log(`You are EXCEEDING your average daily use (${(actualUse)} GB/day), continuing this high usage, you'll exceed your data plan by ${((actualUse*30)-planLimit).toFixed(1)} GB.`)
         console.log(`To stay below your data plan, use no more than ${newMaxUse} GB/day`);
     }
     console.log(``)
