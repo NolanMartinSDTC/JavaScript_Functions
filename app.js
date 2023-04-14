@@ -3,6 +3,7 @@ console.log("Hello World!\n==========\n");
 // Exercise 1 Section
 console.log("EXERCISE 1:\n==========\n");
 
+printOdds(101);
 function printOdds(count){
     if (count >= 0)
     {
@@ -28,6 +29,7 @@ function printOdds(count){
 
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
+checkAge("Nolan", 23);
 
 function checkAge(userName, age)
 {
@@ -46,6 +48,12 @@ function checkAge(userName, age)
 
 // Exercise 3 Section
 console.log("EXERCISE 3:\n==========\n");
+getQuadrant(0,1);
+getQuadrant(1,0);
+getQuadrant(1,1);
+getQuadrant(-1,1);
+getQuadrant(-1,-1);
+getQuadrant(1,-1);
 
 function getQuadrant(x,y)
 {
@@ -63,7 +71,7 @@ function getQuadrant(x,y)
     }
     else if(x > 0 && y < 0)
     {
-        console.log(`(${x},${y}) is in Quadrant 2`)
+        console.log(`(${x},${y}) is in Quadrant 4`)
     }
     else if (x == 0)
     {
@@ -78,6 +86,11 @@ function getQuadrant(x,y)
 
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
+
+triangleType(1,2,2);
+triangleType(1,1,2);
+triangleType(1,1,1,);
+triangleType(9,13,14);
 
 function triangleType(side1,side2,side3)
 {
